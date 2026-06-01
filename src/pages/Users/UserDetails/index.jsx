@@ -64,7 +64,7 @@ function AdminsTable({ search, statusFilter, onView }) {
           </tr></thead>
           <tbody>
             {paged.length===0
-              ? <tr><td colSpan={7}><div className="empty-state"><div className="empty-state-icon">👤</div><div className="empty-state-title">No admins found</div></div></td></tr>
+              ? <tr><td colSpan={7}><div className="empty-state"><div className="empty-state-icon">👤</div><div className="empty-state-title">Noo admins found</div></div></td></tr>
               : paged.map(a => (
                 <tr key={a.id}>
                   <td><div className="user-cell">
