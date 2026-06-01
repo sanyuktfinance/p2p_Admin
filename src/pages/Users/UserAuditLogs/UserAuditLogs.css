@@ -1,0 +1,26 @@
+/* src/pages/Users/UserAuditLogs/UserAuditLogs.css */
+
+.audit-action-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.audit-action-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.audit-target {
+  font-size: 11px;
+  color: var(--blue-600);
+  font-family: monospace;
+}
+.audit-details {
+  font-size: 12px;
+  color: var(--text-secondary);
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.4;
+}

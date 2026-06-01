@@ -1,0 +1,62 @@
+/* src/pages/Users/UserDetails/UserDetails.css */
+
+/* ── Credit Score Bar ── */
+.credit-score-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.score-bar-wrap {
+  width: 80px;
+  height: 4px;
+  background: #E2E8F0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.score-bar {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* ── Repayment Bar ── */
+.repay-bar-wrap {
+  width: 60px;
+  height: 4px;
+  background: #E2E8F0;
+  border-radius: 999px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.repay-bar {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* ── Section Label Row ── */
+.section-label-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  margin-top: 4px;
+}
+.section-label-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* ── Stat grid wider on larger screens ── */
+@media (max-width: 1400px) {
+  .user-stats-grid-6 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media (max-width: 900px) {
+  .user-stats-grid-6 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

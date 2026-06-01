@@ -1,0 +1,228 @@
+// src/constants/usersMockData.js
+// Complete mock data for User Module — Admin, Lender, Borrower
+
+// ── ADMINS ────────────────────────────────────────────
+export const ADMINS = [
+  {
+    id: 'ADM-001', name: 'Muskan verma',    email: 'muskan@23.com',
+    phone: '9876543210', role: 'master_admin',     status: 'active',
+    avatar: 'RK', joinDate: '2023-01-15',   lastLogin: '2024-05-18 09:23',
+    permissions: ['all'], twoFA: true, ipRestriction: false,
+    actionsCount: 2840,
+  },
+  {
+    id: 'ADM-002', name: 'Arun Mehta',      email: 'arun@lenden.com',
+    phone: '9812345678', role: 'admin',           status: 'active',
+    avatar: 'AM', joinDate: '2023-03-10',   lastLogin: '2024-05-18 08:45',
+    permissions: ['users','loans','payments'], twoFA: true, ipRestriction: true,
+    actionsCount: 1240,
+  },
+  {
+    id: 'ADM-003', name: 'Priya Sharma',    email: 'priya@lenden.com',
+    phone: '9823456789', role: 'finance_manager', status: 'active',
+    avatar: 'PS', joinDate: '2023-06-20',   lastLogin: '2024-05-17 17:30',
+    permissions: ['accounts','reports'], twoFA: false, ipRestriction: false,
+    actionsCount: 680,
+  },
+  {
+    id: 'ADM-004', name: 'Vikram Singh',    email: 'vikram@lenden.com',
+    phone: '9834567890', role: 'loan_manager',    status: 'active',
+    avatar: 'VS', joinDate: '2023-08-05',   lastLogin: '2024-05-17 14:12',
+    permissions: ['loans','kyc'], twoFA: true, ipRestriction: false,
+    actionsCount: 1560,
+  },
+  {
+    id: 'ADM-005', name: 'Sneha Patel',     email: 'sneha@lenden.com',
+    phone: '9845678901', role: 'support',         status: 'inactive',
+    avatar: 'SP', joinDate: '2023-10-12',   lastLogin: '2024-05-15 11:00',
+    permissions: ['support','users'], twoFA: false, ipRestriction: false,
+    actionsCount: 320,
+  },
+  {
+    id: 'ADM-006', name: 'Deepak Joshi',    email: 'deepak@lenden.com',
+    phone: '9856789012', role: 'admin',           status: 'suspended',
+    avatar: 'DJ', joinDate: '2023-11-01',   lastLogin: '2024-05-10 09:00',
+    permissions: ['users'], twoFA: false, ipRestriction: false,
+    actionsCount: 180,
+  },
+]
+
+// ── LENDERS ───────────────────────────────────────────
+export const LENDERS = [
+  {
+    id: 'LND-001', name: 'Rahul Sharma',    email: 'rahul@gmail.com',
+    phone: '9911223344', status: 'active',  kycStatus: 'verified',
+    avatar: 'RS', joinDate: '2023-02-10',   lastLogin: '2024-05-18 10:15',
+    totalInvested: 1250000, currentPortfolio: 1418500, totalEarned: 168500,
+    xirr: 12.4, activeLoans: 487, walletBalance: 45000,
+    city: 'Mumbai', state: 'Maharashtra', panVerified: true, bankVerified: true,
+    riskProfile: 'moderate', totalWithdrawn: 230000,
+  },
+  {
+    id: 'LND-002', name: 'Priya Nair',      email: 'priya.nair@gmail.com',
+    phone: '9922334455', status: 'active',  kycStatus: 'verified',
+    avatar: 'PN', joinDate: '2023-04-15',   lastLogin: '2024-05-17 16:30',
+    totalInvested: 500000, currentPortfolio: 562000, totalEarned: 62000,
+    xirr: 11.8, activeLoans: 213, walletBalance: 12000,
+    city: 'Bangalore', state: 'Karnataka', panVerified: true, bankVerified: true,
+    riskProfile: 'conservative', totalWithdrawn: 80000,
+  },
+  {
+    id: 'LND-003', name: 'Ankit Verma',     email: 'ankit.v@yahoo.com',
+    phone: '9933445566', status: 'active',  kycStatus: 'verified',
+    avatar: 'AV', joinDate: '2023-05-20',   lastLogin: '2024-05-18 08:00',
+    totalInvested: 2000000, currentPortfolio: 2258000, totalEarned: 258000,
+    xirr: 12.9, activeLoans: 820, walletBalance: 75000,
+    city: 'Delhi', state: 'Delhi', panVerified: true, bankVerified: true,
+    riskProfile: 'aggressive', totalWithdrawn: 450000,
+  },
+  {
+    id: 'LND-004', name: 'Sunita Mehta',    email: 'sunita.m@gmail.com',
+    phone: '9944556677', status: 'active',  kycStatus: 'pending',
+    avatar: 'SM', joinDate: '2024-01-08',   lastLogin: '2024-05-16 14:45',
+    totalInvested: 300000, currentPortfolio: 322000, totalEarned: 22000,
+    xirr: 11.2, activeLoans: 120, walletBalance: 8500,
+    city: 'Pune', state: 'Maharashtra', panVerified: true, bankVerified: false,
+    riskProfile: 'moderate', totalWithdrawn: 0,
+  },
+  {
+    id: 'LND-005', name: 'Ravi Gupta',      email: 'ravi.g@hotmail.com',
+    phone: '9955667788', status: 'suspended', kycStatus: 'verified',
+    avatar: 'RG', joinDate: '2023-07-22',   lastLogin: '2024-04-30 10:00',
+    totalInvested: 750000, currentPortfolio: 840000, totalEarned: 90000,
+    xirr: 11.5, activeLoans: 310, walletBalance: 22000,
+    city: 'Ahmedabad', state: 'Gujarat', panVerified: true, bankVerified: true,
+    riskProfile: 'moderate', totalWithdrawn: 150000,
+  },
+  {
+    id: 'LND-006', name: 'Meera Joshi',     email: 'meera.j@gmail.com',
+    phone: '9966778899', status: 'active',  kycStatus: 'rejected',
+    avatar: 'MJ', joinDate: '2024-03-12',   lastLogin: '2024-05-15 12:30',
+    totalInvested: 0, currentPortfolio: 0, totalEarned: 0,
+    xirr: 0, activeLoans: 0, walletBalance: 5000,
+    city: 'Hyderabad', state: 'Telangana', panVerified: false, bankVerified: false,
+    riskProfile: null, totalWithdrawn: 0,
+  },
+  {
+    id: 'LND-007', name: 'Karan Shah',      email: 'karan.s@gmail.com',
+    phone: '9977889900', status: 'active',  kycStatus: 'verified',
+    avatar: 'KS', joinDate: '2023-09-05',   lastLogin: '2024-05-18 07:45',
+    totalInvested: 900000, currentPortfolio: 1012500, totalEarned: 112500,
+    xirr: 12.2, activeLoans: 380, walletBalance: 35000,
+    city: 'Chennai', state: 'Tamil Nadu', panVerified: true, bankVerified: true,
+    riskProfile: 'moderate', totalWithdrawn: 200000,
+  },
+  {
+    id: 'LND-008', name: 'Divya Singh',     email: 'divya.s@gmail.com',
+    phone: '9988990011', status: 'inactive', kycStatus: 'verified',
+    avatar: 'DS', joinDate: '2023-12-01',   lastLogin: '2024-03-20 09:00',
+    totalInvested: 150000, currentPortfolio: 163500, totalEarned: 13500,
+    xirr: 10.8, activeLoans: 60, walletBalance: 3000,
+    city: 'Kolkata', state: 'West Bengal', panVerified: true, bankVerified: true,
+    riskProfile: 'conservative', totalWithdrawn: 20000,
+  },
+]
+
+// ── BORROWERS ─────────────────────────────────────────
+export const BORROWERS = [
+  {
+    id: 'BRW-001', name: 'Suresh Tiwari',   email: 'suresh.t@gmail.com',
+    phone: '8811223344', status: 'active',  kycStatus: 'verified',
+    avatar: 'ST', joinDate: '2023-03-15',   dob: '1990-05-12',
+    loanCount: 3, activeLoanAmount: 150000, totalBorrowed: 300000, totalRepaid: 210000,
+    creditScore: 742, repaymentRate: 98.5, city: 'Mumbai', state: 'Maharashtra',
+    employmentType: 'salaried', monthlyIncome: 65000, panVerified: true,
+    bankVerified: true, npaLoans: 0, lastLoanDate: '2024-03-01',
+  },
+  {
+    id: 'BRW-002', name: 'Anjali Rao',      email: 'anjali.r@gmail.com',
+    phone: '8822334455', status: 'active',  kycStatus: 'verified',
+    avatar: 'AR', joinDate: '2023-06-20',   dob: '1992-09-25',
+    loanCount: 2, activeLoanAmount: 75000,  totalBorrowed: 150000, totalRepaid: 112500,
+    creditScore: 780, repaymentRate: 100.0, city: 'Bangalore', state: 'Karnataka',
+    employmentType: 'salaried', monthlyIncome: 80000, panVerified: true,
+    bankVerified: true, npaLoans: 0, lastLoanDate: '2024-04-15',
+  },
+  {
+    id: 'BRW-003', name: 'Deepak Patel',    email: 'deepak.p@gmail.com',
+    phone: '8833445566', status: 'active',  kycStatus: 'verified',
+    avatar: 'DP', joinDate: '2023-08-10',   dob: '1988-01-30',
+    loanCount: 4, activeLoanAmount: 200000, totalBorrowed: 600000, totalRepaid: 480000,
+    creditScore: 710, repaymentRate: 95.2, city: 'Delhi', state: 'Delhi',
+    employmentType: 'self_employed', monthlyIncome: 120000, panVerified: true,
+    bankVerified: true, npaLoans: 1, lastLoanDate: '2024-02-10',
+  },
+  {
+    id: 'BRW-004', name: 'Kavita Mishra',   email: 'kavita.m@gmail.com',
+    phone: '8844556677', status: 'active',  kycStatus: 'pending',
+    avatar: 'KM', joinDate: '2024-01-25',   dob: '1995-07-14',
+    loanCount: 1, activeLoanAmount: 50000,  totalBorrowed: 50000, totalRepaid: 0,
+    creditScore: 695, repaymentRate: 0, city: 'Pune', state: 'Maharashtra',
+    employmentType: 'salaried', monthlyIncome: 45000, panVerified: true,
+    bankVerified: false, npaLoans: 0, lastLoanDate: '2024-01-25',
+  },
+  {
+    id: 'BRW-005', name: 'Mukesh Agarwal',  email: 'mukesh.a@gmail.com',
+    phone: '8855667788', status: 'suspended', kycStatus: 'verified',
+    avatar: 'MA', joinDate: '2023-04-01',   dob: '1985-11-08',
+    loanCount: 5, activeLoanAmount: 100000, totalBorrowed: 400000, totalRepaid: 280000,
+    creditScore: 620, repaymentRate: 78.5, city: 'Ahmedabad', state: 'Gujarat',
+    employmentType: 'self_employed', monthlyIncome: 55000, panVerified: true,
+    bankVerified: true, npaLoans: 2, lastLoanDate: '2024-01-05',
+  },
+  {
+    id: 'BRW-006', name: 'Nita Verma',      email: 'nita.v@gmail.com',
+    phone: '8866778899', status: 'active',  kycStatus: 'verified',
+    avatar: 'NV', joinDate: '2023-10-15',   dob: '1993-03-22',
+    loanCount: 2, activeLoanAmount: 80000,  totalBorrowed: 130000, totalRepaid: 97500,
+    creditScore: 755, repaymentRate: 99.1, city: 'Hyderabad', state: 'Telangana',
+    employmentType: 'salaried', monthlyIncome: 70000, panVerified: true,
+    bankVerified: true, npaLoans: 0, lastLoanDate: '2024-03-20',
+  },
+  {
+    id: 'BRW-007', name: 'Rajan Kumar',     email: 'rajan.k@gmail.com',
+    phone: '8877889900', status: 'active',  kycStatus: 'verified',
+    avatar: 'RK', joinDate: '2023-07-08',   dob: '1991-06-15',
+    loanCount: 6, activeLoanAmount: 250000, totalBorrowed: 800000, totalRepaid: 720000,
+    creditScore: 765, repaymentRate: 97.8, city: 'Chennai', state: 'Tamil Nadu',
+    employmentType: 'salaried', monthlyIncome: 95000, panVerified: true,
+    bankVerified: true, npaLoans: 0, lastLoanDate: '2024-04-01',
+  },
+  {
+    id: 'BRW-008', name: 'Pooja Singh',     email: 'pooja.s@gmail.com',
+    phone: '8888990011', status: 'inactive', kycStatus: 'rejected',
+    avatar: 'PS', joinDate: '2024-02-10',   dob: '1997-12-05',
+    loanCount: 0, activeLoanAmount: 0,     totalBorrowed: 0, totalRepaid: 0,
+    creditScore: 580, repaymentRate: 0, city: 'Kolkata', state: 'West Bengal',
+    employmentType: 'salaried', monthlyIncome: 35000, panVerified: false,
+    bankVerified: false, npaLoans: 0, lastLoanDate: null,
+  },
+]
+
+// ── Audit Logs ────────────────────────────────────────
+export const AUDIT_LOGS = [
+  { id:'LOG-001', userId:'ADM-001', userName:'Rajesh Kumar', userType:'admin',    action:'User Blocked',      target:'BRW-005', details:'Blocked Mukesh Agarwal for NPA violation',       ip:'192.168.1.10', timestamp:'2024-05-18 09:15:32', severity:'high'   },
+  { id:'LOG-002', userId:'ADM-002', userName:'Arun Mehta',   userType:'admin',    action:'Loan Approved',     target:'LON-002', details:'Approved ₹75,000 loan for Anjali Rao',            ip:'192.168.1.12', timestamp:'2024-05-18 08:52:11', severity:'medium' },
+  { id:'LOG-003', userId:'LND-001', userName:'Rahul Sharma', userType:'lender',   action:'Fund Added',        target:'WAL-001', details:'Added ₹25,000 to wallet via UPI',                 ip:'103.45.67.89', timestamp:'2024-05-18 08:30:45', severity:'low'    },
+  { id:'LOG-004', userId:'BRW-003', userName:'Deepak Patel', userType:'borrower', action:'EMI Missed',        target:'LON-008', details:'EMI of ₹4,200 missed on loan LON-008',             ip:'110.22.33.44', timestamp:'2024-05-17 23:59:00', severity:'high'   },
+  { id:'LOG-005', userId:'ADM-003', userName:'Priya Sharma', userType:'admin',    action:'Report Downloaded', target:'RPT-002', details:'Downloaded TDS report for FY 2024-25',            ip:'192.168.1.15', timestamp:'2024-05-17 17:25:00', severity:'low'    },
+  { id:'LOG-006', userId:'LND-003', userName:'Ankit Verma',  userType:'lender',   action:'Withdrawal Request',target:'WAL-003', details:'Withdrawal of ₹50,000 to HDFC ****4321 initiated', ip:'106.77.88.99', timestamp:'2024-05-17 16:10:22', severity:'medium' },
+  { id:'LOG-007', userId:'ADM-001', userName:'Rajesh Kumar', userType:'admin',    action:'KYC Verified',      target:'LND-004', details:'Approved KYC for Sunita Mehta — PAN + Aadhaar',   ip:'192.168.1.10', timestamp:'2024-05-17 15:40:10', severity:'medium' },
+  { id:'LOG-008', userId:'BRW-001', userName:'Suresh Tiwari',userType:'borrower', action:'Loan Applied',      target:'LON-015', details:'Applied for ₹1,00,000 loan — 12 month tenure',    ip:'115.66.77.88', timestamp:'2024-05-17 14:30:55', severity:'low'    },
+  { id:'LOG-009', userId:'ADM-004', userName:'Vikram Singh', userType:'admin',    action:'Loan Rejected',     target:'LON-012', details:'Rejected loan — low credit score (580)',           ip:'192.168.1.18', timestamp:'2024-05-17 12:15:30', severity:'medium' },
+  { id:'LOG-010', userId:'LND-002', userName:'Priya Nair',   userType:'lender',   action:'Lending Order',     target:'ORD-022', details:'Lent ₹5,000 to B-20145 via Manual Lending',        ip:'120.55.66.77', timestamp:'2024-05-17 11:05:44', severity:'low'    },
+  { id:'LOG-011', userId:'ADM-001', userName:'Rajesh Kumar', userType:'admin',    action:'Admin Created',     target:'ADM-006', details:'Created new admin account for Deepak Joshi',      ip:'192.168.1.10', timestamp:'2024-05-16 10:22:00', severity:'high'   },
+  { id:'LOG-012', userId:'BRW-005', userName:'Mukesh Agarwal',userType:'borrower','action':'Login Failed',    target:'AUTH',    details:'3 failed login attempts — IP blocked temporarily', ip:'111.22.33.55', timestamp:'2024-05-15 08:45:12', severity:'high'   },
+]
+
+// ── User Stats Summary ────────────────────────────────
+export const USER_STATS = {
+  totalUsers:     485,
+  totalAdmins:    15,
+  totalLenders:   150,
+  totalBorrowers: 320,
+  activeToday:    87,
+  newThisWeek:    34,
+  kycPending:     28,
+  suspended:      12,
+}

@@ -1,0 +1,21 @@
+// src/config/permissions.js
+import { ROLES } from './roles'
+
+// Which roles can access which features
+export const PERMISSIONS = {
+  ADD_ADMIN:          [ROLES.SUPER_ADMIN],
+  DELETE_ADMIN:       [ROLES.SUPER_ADMIN],
+  ASSIGN_PERMISSIONS: [ROLES.SUPER_ADMIN],
+  PLATFORM_SETTINGS:  [ROLES.SUPER_ADMIN],
+  SECURITY_SETTINGS:  [ROLES.SUPER_ADMIN],
+  ADD_ROLE:           [ROLES.SUPER_ADMIN],
+  VIEW_REVENUE:       [ROLES.SUPER_ADMIN, ROLES.FINANCE_MANAGER],
+  APPROVE_LOAN:       [ROLES.SUPER_ADMIN, ROLES.LOAN_MANAGER],
+  VIEW_LENDERS:       [ROLES.SUPER_ADMIN, ROLES.ADMIN, ROLES.SUPPORT],
+  VIEW_BORROWERS:     [ROLES.SUPER_ADMIN, ROLES.ADMIN, ROLES.SUPPORT],
+  VIEW_TRANSACTIONS:  [ROLES.SUPER_ADMIN, ROLES.ADMIN, ROLES.FINANCE_MANAGER],
+}
+
+export const hasPermission = (userRole, permission) => {
+  return PERMISSIONS[permission]?.includes(userRole) ?? false
+}

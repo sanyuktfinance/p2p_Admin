@@ -1,0 +1,22 @@
+/* ============================================
+   LenDen Admin — Responsive
+   ============================================ */
+@media (max-width: 1024px) {
+  .admin-main.sidebar-open { margin-left: 0 !important; }
+  .sidebar-desktop { display: none !important; }
+  .sidebar-mobile-btn { display: flex !important; }
+}
+@media (min-width: 1025px) {
+  .sidebar-mobile-btn { display: none !important; }
+  .mobile-overlay { display: none !important; }
+}
+@media (max-width: 768px) {
+  .admin-page-content { padding: var(--sp-4); }
+  .hide-mobile { display: none !important; }
+  .dash-stats-grid { grid-template-columns: 1fr !important; }
+  .dash-charts-row { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 640px) {
+  .topbar-search { display: none !important; }
+  .topbar-date   { display: none !important; }
+}
